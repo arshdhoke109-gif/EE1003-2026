@@ -1,0 +1,16 @@
+\frametitle{Numerical Simulation (Python)}
+\begin{lstlisting}
+# Run simulation
+results = simulate_sequence(x_initial, num_iterations)
+
+# Plotting the convergence
+plt.figure(figsize=(10, 6))
+plt.plot(range(len(results)), results, 'o-', label='Sequence $x_n$')
+plt.axhline(y=1.5, color='r', linestyle='--', label='Analytical Limit (1.5)')
+plt.title('Convergence of $x_{n+1} = \\frac{x_n}{2} + \\frac{9}{8x_n}$')
+plt.xlabel('Iteration ($n$)')
+plt.ylabel('Value ($x_n$)')
+plt.grid(True, linestyle=':', alpha=0.7)
+plt.legend()
+plt.show()
+\end{lstlisting}
